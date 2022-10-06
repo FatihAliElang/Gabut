@@ -11,9 +11,9 @@ def main():
         if pemain == "Batu":
             print("Kita seri!")
         if pemain == "Gunting":
-            print("Kamu menang!")
-        if pemain == "Kertas":
             print("Kamu kalah!")
+        if pemain == "Kertas":
+            print("Kamu menang!")
 
     if komputer == "Gunting":
         if pemain == "Batu":
