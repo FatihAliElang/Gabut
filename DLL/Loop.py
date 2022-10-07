@@ -1,44 +1,42 @@
-# def cek(usia):
-#     if (usia < 0 or usia > 100):
-#         print("Usia tidak valdi")
-#     elif(usia > 17):
-#         print("Silahkan menonton anu")
-#     else:
-#         print("Silahkan menonton berlian beku")
+# Coba
+x = 0
 
-# cek(100)
+while (x < 10):
+    x += 1
+    print("looping ke-"+str(x))
+       
+for i in range(2, 12, 2):
+    print("looping ke-"+str(i))
 
-try:
-    def nilai():
-        x = float(input("Masukkan nilai yang didapat: "))
 
-        if (x < 0 or x > 100):
-            print("Nilai tidak valid")
-        elif (x < 60):
-            print("E")
-        elif (x < 70):
-            print("D")
-        elif (x < 80):
-            print("C")
-        elif (x < 90):
-            print("B")
-        elif (x <= 100):
-            print("A")
+# Piramida
+def piramida():
+    a = int(input('Pilih tinggi piramida: '))
+    b = a
 
-        print("Convert lagi?")
-        print("Iya atau Tidak?")
-        jawab = str(input("")).lower().capitalize()
+    for i in range(a):
+        for j in range(i, a):
+            print(" ", end="")
+        b-= 1
+        for k in range(b, a):
+            print("* ", end="")
+        print("")
+    
+    print("Lagi?")
+    lagi = str(input("y/n: ")).lower()
+    if lagi == "y":
+        piramida()
 
-        if jawab == 'Iya':
-            nilai()
-        elif jawab == "Tidak":
-            print("Terimakasih")
-        else:
-            print("Pilih dengan benar")
+    else:
+        print("Terima kasih")
 
-    nilai()
+piramida()
 
-except ValueError:
-    print("Ketik angka")
-    nilai()
 
+# Berlian beku
+tinggi = eval(input("Pilih tinggi berlian: "))
+
+for m in range(tinggi):
+    print(" " * (tinggi - m), "0" * (2*m + 1))
+for m in range (tinggi - 2, -1, -1):
+    print(" " * (tinggi - m), "0" * (2*m +1))
